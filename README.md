@@ -1,28 +1,39 @@
 [![TypeScript version][ts-badge]][typescript-31]
 [![Node.js version][nodejs-badge]][nodejs]
-[![APLv2][license-badge]][LICENSE]
-[![Build Status][travis-badge]][travis-ci]
-[![PRs Welcome][prs-badge]][prs]
-[![Donate][donate-badge]][donate]
 
-[![Watch on GitHub][github-watch-badge]][github-watch]
-[![Star on GitHub][github-star-badge]][github-star]
-[![Tweet][twitter-badge]][twitter]
+# sketch-linter
 
-# node-typescript-boilerplate
+## to run (under development phase)
 
-Minimalistic boilerplate to jump-start a [Node.js][nodejs] project in [TypeScript][typescript] [3.1][typescript-31].
+### preparation
+
+1. [Install sketch](https://www.sketchapp.com/) first.
+2. fill `sketchToolPath` and `targetSketchFilePath` within `linter.config.json`.
+3. run `npm install` on project root directory.
+
+## development iteration
+
+1. run `tsc --target es5 -w cli-app/*.ts --outDir dist/` .
+2. `node dist/cli-app/index.js lint` .
+
+## test with jest
+
+1. run `npn test` .
+
+by doing this, you can run tests of specs depends on `jest.config.js` .
+
+## node-typescript-boilerplate
 
 What's included:
 
-+ [TypeScript][typescript] [3.1][typescript-31],
-+ [TSLint 5][tslint] with [Microsoft rules][tslint-microsoft-contrib],
-+ [Jest][jest] unit testing and code coverage,
-+ Type definitions for Node.js v8 and Jest,
-+ [Prettier][prettier] to enforces a consistent code style (but it's optional),
-+ [NPM scripts for common operations](#available-scripts),
-+ a simple example of TypeScript code and unit test,
-+ .editorconfig for consistent file format.
+- [TypeScript][typescript] [3.1][typescript-31],
+- [TSLint 5][tslint] with [Microsoft rules][tslint-microsoft-contrib],
+- [Jest][jest] unit testing and code coverage,
+- Type definitions for Node.js v8 and Jest,
+- [Prettier][prettier] to enforces a consistent code style (but it's optional),
+- [NPM scripts for common operations](#available-scripts),
+- a simple example of TypeScript code and unit test,
+- .editorconfig for consistent file format.
 
 ## Quick start
 
@@ -51,18 +62,19 @@ This is **optional**, but if you want to learn how to write JavaScript tests for
 
 ## Available scripts
 
-+ `clean` - remove coverage data, Jest cache and transpiled files,
-+ `build` - transpile TypeScript to ES6,
-+ `build:watch` - interactive watch mode to automatically transpile source files,
-+ `lint` - lint source files and tests,
-+ `test` - run tests,
-+ `test:watch` - interactive watch mode to automatically re-run tests
+- `clean` - remove coverage data, Jest cache and transpiled files,
+- `build` - transpile TypeScript to ES6,
+- `build:watch` - interactive watch mode to automatically transpile source files,
+- `lint` - lint source files and tests,
+- `test` - run tests,
+- `test:watch` - interactive watch mode to automatically re-run tests
 
 ## Alternative
 
 As an alternative to TypeScript, you can try my [Node.js Flow boilerplate][flow-boilerplate]. It's basically the same but with ES6, async/await, Flow type checking and ESLint.
 
 ## License
+
 Licensed under the APLv2. See the [LICENSE](https://github.com/jsynowiec/node-typescript-boilerplate/blob/master/LICENSE) file for details.
 
 [ts-badge]: https://img.shields.io/badge/TypeScript-3.1-blue.svg
